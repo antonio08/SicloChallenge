@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Bias dimens -->
+    <dimen name="bias_one">0.1</dimen>
+    <dimen name="bias_four">0.4</dimen>
+    <dimen name="bias_seven">0.7</dimen>
+
+    <!--Text Sizes-->
+    <dimen name="hint_text_size">18sp</dimen>
+    <dimen name="headline_6">20sp</dimen>
+    <dimen name="subtitle_2">14sp</dimen>
+
+    <!-- Margin dimens-->
+    <dimen name="margin">18dp</dimen>
+</resources>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Siclo Challenge</string>
+    <string name="welcome_message">Bienvenido a Siclo</string>
+    <string name="sign_in_message">Inicia sesión por una experiencia única</string>
+    <string name="email">Correo</string>
+    <string name="password">Contraseña</string>
+    <string name="signIn">Iniciar Sesión</string>
+    <string name="create_account">Crear cuenta</string>
+</resources>
