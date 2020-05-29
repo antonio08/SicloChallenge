@@ -17,28 +17,38 @@ class LoginViewModelTest {
     }
 
     @Test
-    fun givenUserNameEmptyWhenLoginInUserThenGetsErrorEmptyPassword() {
-        val userName = ""
-        val password = "test"
+    fun givenPasswordEmptyWhenLoginInUserThenGetsErrorEmptyPassword() {
+        val email = "test@email.com"
+        val password = ""
 
-        val result = mViewModel.validateCredentials(userName, password)
+        val result = mViewModel.validateCredentials(email, password)
 
         assertEquals(LoginContract.RESULT_VALIDATION_ERROR_EMPTY_PASSWORD, result)
     }
 
     @Test
     fun givenEmailEmptyWhenLoginInUserThenGetsErrorEmptyUserName() {
-        val userName = ""
+        val email = ""
         val password = "Test"
 
-        val result = mViewModel.validateCredentials(userName, password)
+        val result = mViewModel.validateCredentials(email, password)
 
         assertEquals(LoginContract.RESULT_VALIDATION_ERROR_EMPTY_EMAIL, result)
     }
 
     @Test
+    fun givenInvalidEmailWhenLoginInUserThenGetsErrorInvalidEmailFormat() {
+        val email = "not an email"
+        val password = "Test"
+
+        val result = mViewModel.validateCredentials(email, password)
+
+        assertEquals(LoginContract.RESULT_VALIDATION_ERROR_INVALID_EMAIL_FORMAT, result)
+    }
+
+    @Test
     fun givenValidCredentialsWhenLoginInUserThenGetsValidationSuccess() {
-        val userName = "Antonio"
+        val userName = "test@email.com"
         val password = "test"
 
         val result = mViewModel.validateCredentials(userName, password)
