@@ -11,7 +11,7 @@ import mx.com.siclochallenge.api.FakeUserLoginRequest
 import mx.com.siclochallenge.contract.LoginContract
 import org.jetbrains.annotations.NotNull
 
-class LoginViewModel() : ViewModel() {
+class LoginViewModel : ViewModel() {
     private val mValidationResultError = MutableLiveData<Int>()
     private val mLoginResult = MutableLiveData<Int>()
 
