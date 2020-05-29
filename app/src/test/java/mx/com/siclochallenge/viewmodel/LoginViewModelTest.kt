@@ -4,9 +4,9 @@
 package mx.com.siclochallenge.viewmodel
 
 import mx.com.siclochallenge.contract.LoginContract
-import org.junit.jupiter.api.*
 import org.junit.jupiter.api.Assertions.assertEquals
-import org.mockito.MockitoAnnotations
+import org.junit.jupiter.api.BeforeEach
+import org.junit.jupiter.api.Test
 
 class LoginViewModelTest {
     private lateinit var mViewModel: LoginViewModel

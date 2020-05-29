@@ -7,9 +7,12 @@
 
     <!--Text Sizes-->
     <dimen name="hint_text_size">18sp</dimen>
-    <dimen name="headline_6">20sp</dimen>
+    <dimen name="headline_4">34sp</dimen>
     <dimen name="subtitle_2">14sp</dimen>
 
     <!-- Margin dimens-->
-    <dimen name="margin">18dp</dimen>
+    <dimen name="margin">16dp</dimen>
+    <dimen name="margin_secondary">8dp</dimen>
+    <dimen name="margin_between_layouts_primary">8dp</dimen>
+    <dimen name="margin_between_layouts_secondary">16dp</dimen>
 </resources>

@@ -12,4 +12,11 @@
     <string name="empty_password">Please insert your password</string>
     <string name="invalid_email">Please insert a valid email</string>
     <string name="login_failed">Either your email or password is incorrect</string>
+
+    <!-- Calendar -->
+    <string name="calendar_title">Calendar</string>
+    <string name="class_name">Class:</string>
+    <string name="instructor_name">Instructor:</string>
+    <string name="class_time">Time:</string>
+    <string name="check_class_button">Check it out</string>
 </resources>
