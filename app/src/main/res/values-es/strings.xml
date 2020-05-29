@@ -1,9 +1,15 @@
 <resources>
     <string name="app_name">Siclo Challenge</string>
+
+    <!-- Login -->
     <string name="welcome_message">Bienvenido a Siclo</string>
     <string name="sign_in_message">Inicia sesión por una experiencia única</string>
     <string name="email">Correo</string>
     <string name="password">Contraseña</string>
     <string name="signIn">Iniciar Sesión</string>
     <string name="create_account">Crear cuenta</string>
+    <string name="empty_email">Por favor ingresa tu correo</string>
+    <string name="empty_password">Por favor ingresa tu contraseña</string>
+    <string name="invalid_email">Por favor ingresa una cuenta valida de correo</string>
+    <string name="login_failed">Tu correo y/o contraseña son incorrectos</string>
 </resources>
