@@ -35,7 +35,7 @@ internal class CalendarViewModelTest {
         val mockViewModel = Mockito.mock(CalendarViewModel::class.java)
         Mockito.`when`(mockRetrieveClasses.retrieveClasses()).thenReturn(Unit)
 
-        mViewModel.fetchClasses(date)
+        mViewModel.fetchClasses()
         val classes = mViewModel.getClassesApiResponse()
 
 
@@ -49,7 +49,7 @@ internal class CalendarViewModelTest {
         calendar.set(2020, 5, 29)
         val date = calendar.time
 
-        mViewModel.fetchClasses(date)
+        mViewModel.fetchClasses()
         val classes = mViewModel.getClassesApiResponse()
 
         assertNull(classes.value)
