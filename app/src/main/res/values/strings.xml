@@ -20,4 +20,6 @@
     <string name="class_time">Time:</string>
     <string name="check_class_button">Check it out</string>
     <string name="api_response_failure">Something went wrong, please try again later</string>
+    <string name="wait_message">Pleas wait…</string>
+    <string name="no_classes">No classes for this day</string>
 </resources>

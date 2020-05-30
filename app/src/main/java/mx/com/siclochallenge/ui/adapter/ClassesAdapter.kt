@@ -9,10 +9,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import mx.com.siclochallenge.R
-import mx.com.siclochallenge.data.Classes
+import mx.com.siclochallenge.data.CalendarItinerary
 
 
-class ClassesAdapter(dataSet: List<Classes>) :
+class ClassesAdapter(dataSet: List<CalendarItinerary>) :
     RecyclerView.Adapter<ClassesAdapter.ClassesViewHolder>() {
     private val mDataSet = dataSet
 
@@ -33,8 +33,8 @@ class ClassesAdapter(dataSet: List<Classes>) :
 
     override fun onBindViewHolder(holder: ClassesViewHolder, position: Int) {
         holder.mClassName.text = mDataSet[position].mClassName
-        holder.mInstructorName.text = mDataSet[position].mClassInstructor.mName
-        holder.mClassTime.text = mDataSet[position].mClassTime
+        holder.mInstructorName.text = mDataSet[position].mInstructorName
+        holder.mClassTime.text = mDataSet[position].mTime
     }
 
     override fun getItemCount(): Int {

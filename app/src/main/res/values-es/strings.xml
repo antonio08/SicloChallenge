@@ -20,4 +20,6 @@
     <string name="class_time">Hora:</string>
     <string name="check_class_button">Conocela</string>
     <string name="api_response_failure">Sucedió un error, por favor intenta de nuevo más tarde</string>
+    <string name="wait_message">Por favor espere…</string>
+    <string name="no_classes">No hay clases registradas para este día</string>
 </resources>

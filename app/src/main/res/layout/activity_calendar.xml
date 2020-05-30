@@ -47,4 +47,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         />
 
+    <include
+        android:id="@+id/progressBar"
+        android:visibility="gone"
+        layout="@layout/progress_bar"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
