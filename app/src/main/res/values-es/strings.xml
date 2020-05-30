@@ -19,4 +19,5 @@
     <string name="instructor_name">Instructor:</string>
     <string name="class_time">Hora:</string>
     <string name="check_class_button">Conocela</string>
+    <string name="api_response_failure">Sucedió un error, por favor intenta de nuevo más tarde</string>
 </resources>

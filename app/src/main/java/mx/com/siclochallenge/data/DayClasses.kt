@@ -3,7 +3,11 @@
  */
 package mx.com.siclochallenge.data
 
-class DayClasses(day: String, dayClasses: List<Classes>) {
-    val mDay = day
+import com.google.gson.annotations.SerializedName
+
+class DayClasses(dayClasses: Map<String, List<Classes>>) {
+
+    @SerializedName("calendar")
     val mDayClasses = dayClasses
+
 }

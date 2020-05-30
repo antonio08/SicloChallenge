@@ -19,4 +19,5 @@
     <string name="instructor_name">Instructor:</string>
     <string name="class_time">Time:</string>
     <string name="check_class_button">Check it out</string>
+    <string name="api_response_failure">Something went wrong, please try again later</string>
 </resources>

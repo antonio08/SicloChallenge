@@ -12,7 +12,7 @@ import mx.com.siclochallenge.R
 import mx.com.siclochallenge.data.Classes
 
 
-class ClassesAdapter(dataSet: List<Classes>):
+class ClassesAdapter(dataSet: List<Classes>) :
     RecyclerView.Adapter<ClassesAdapter.ClassesViewHolder>() {
     private val mDataSet = dataSet
 
@@ -25,7 +25,7 @@ class ClassesAdapter(dataSet: List<Classes>):
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):
-            ClassesAdapter.ClassesViewHolder {
+            ClassesViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         val view: View = layoutInflater.inflate(R.layout.class_element, parent, false)
         return ClassesViewHolder(view)
@@ -33,7 +33,7 @@ class ClassesAdapter(dataSet: List<Classes>):
 
     override fun onBindViewHolder(holder: ClassesViewHolder, position: Int) {
         holder.mClassName.text = mDataSet[position].mClassName
-        holder.mInstructorName.text = mDataSet[position].mClassInstructor
+        holder.mInstructorName.text = mDataSet[position].mClassInstructor.mName
         holder.mClassTime.text = mDataSet[position].mClassTime
     }
 

@@ -7,7 +7,7 @@ import androidx.annotation.NonNull
 import androidx.core.util.PatternsCompat
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import mx.com.siclochallenge.api.FakeUserLoginRequest
+import mx.com.siclochallenge.api.request.FakeUserLoginRequest
 import mx.com.siclochallenge.contract.LoginContract
 import org.jetbrains.annotations.NotNull
 
@@ -77,7 +77,11 @@ class LoginViewModel : ViewModel() {
 
     private fun proceedToLogin(@NonNull email: String, @NonNull password: String) {
         // Create the request
-        val fakeUserLoginRequest = FakeUserLoginRequest(email, password)
+        val fakeUserLoginRequest =
+            FakeUserLoginRequest(
+                email,
+                password
+            )
         val loginResult = fakeUserLoginRequest.validateUser()
 
         mLoginResult.value = loginResult

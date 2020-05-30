@@ -3,11 +3,14 @@
  */
 package mx.com.siclochallenge.viewmodel
 
+import mx.com.siclochallenge.api.request.UserRepository
 import mx.com.siclochallenge.data.Classes
+import mx.com.siclochallenge.data.Instructor
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNull
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
+import org.mockito.Mockito
 import java.util.*
 
 internal class CalendarViewModelTest {
@@ -21,16 +24,20 @@ internal class CalendarViewModelTest {
     @Test
     fun givenDateWhenSelectingCalendarGetsClassesList() {
         val className = "Class Siclo"
-        val classInstructor = "Instructor"
+        val classInstructor = Instructor(1, "Test", "http://www.fakeurl.com")
         val classTime = "08:00 AM"
         val calendar = Calendar.getInstance()
         calendar.set(2020, 5, 29)
-        val date =  calendar.time
-        val fakeClasses = Classes(className, classInstructor, classTime)
-        val expectedDayClasses : List<Classes> = listOf(fakeClasses)
+        val date = calendar.time
+        val fakeClasses = Classes(className, classInstructor, date.toString(), classTime)
+        val expectedDayClasses: List<Classes> = listOf(fakeClasses)
+        val mockRetrieveClasses = Mockito.mock(UserRepository::class.java)
+        val mockViewModel = Mockito.mock(CalendarViewModel::class.java)
+        Mockito.`when`(mockRetrieveClasses.retrieveClasses()).thenReturn(Unit)
 
-        val classes = mViewModel.getClasses(date)
-        //TODO mock retorfit call
+        mViewModel.fetchClasses(date)
+        val classes = mViewModel.getClassesApiResponse()
+
 
         assertEquals(expectedDayClasses, classes)
 
@@ -40,11 +47,11 @@ internal class CalendarViewModelTest {
     fun givenDateWithNoClassesWhenSelectingCalendarGetsEmptyClassesList() {
         val calendar = Calendar.getInstance()
         calendar.set(2020, 5, 29)
-        val date =  calendar.time
+        val date = calendar.time
 
-        val classes = mViewModel.getClasses(date)
-        //TODO mock retorfit call
+        mViewModel.fetchClasses(date)
+        val classes = mViewModel.getClassesApiResponse()
 
-        assertNull(classes)
+        assertNull(classes.value)
     }
 }

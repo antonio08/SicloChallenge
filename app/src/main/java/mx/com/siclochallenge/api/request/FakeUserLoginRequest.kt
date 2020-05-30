@@ -1,7 +1,7 @@
 /*
  * Created by Antonio Lozano on 5/28/2020.
  */
-package mx.com.siclochallenge.api
+package mx.com.siclochallenge.api.request
 
 import mx.com.siclochallenge.contract.LoginContract
 

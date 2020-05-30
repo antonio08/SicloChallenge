@@ -3,9 +3,25 @@
  */
 package mx.com.siclochallenge.data
 
-class Classes(className: String, classInstructor: String, classTime: String) {
+import com.google.gson.annotations.SerializedName
+
+class Classes(
+    className: String,
+    classInstructor: Instructor,
+    classDate: String,
+    classTime: String
+) {
+
+    @SerializedName("tipo")
     val mClassName = className
+
+    @SerializedName("instructor")
     val mClassInstructor = classInstructor
+
+    @SerializedName("fecha")
+    val mClassDate = classDate
+
+    @SerializedName("hour")
     val mClassTime = classTime
 
 }
